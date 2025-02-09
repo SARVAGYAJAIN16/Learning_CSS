@@ -1,0 +1,67 @@
+Learn about --> colors in CSS
+            -->RGB format vs RGBA format
+code:
+ ----------------------------------- RGB--------------------------------------------------      
+            h1 {
+  color: red;
+  color: rgb(255, 0, 0);
+}
+
+p {
+  color: blue;
+  color: rgb(0, 0, 255);
+------------------------------------RGBA-----------------------------------------------------------
+h1 {
+  color: rgba(255, 0, 0, 1);       /* 'A' is a opacity or tranparency of the text */
+}
+
+p {
+  color: rgba(0, 0, 255, 0.5);
+}
+-------------------------------------------------------------------------------------------------------
+           --> about hue,tint,shade,tone
+           --> Background property of CSS
+                1 background-color
+                2 background-image
+                3 background -repeat
+                4 background-position
+                5 background-attachment
+  In detail:-
+ background-color: Sets the background color of an element.
+ Example: background-color: #FF5733; 
+
+ background-image: Specifies an image to be used as the background. 
+ Example: background-image: url('image.jpg'); 
+
+ background-repeat: Determines how the background image repeats. 
+ Values: repeat, repeat-x, repeat-y, no-repeat.
+ Example: background-repeat: repeat-x; 
+
+ background-position: Sets the starting position of the background image. 
+ Values: Coordinates like top left, center center, bottom right, percentages, or length values. 
+ Example: background-position: center center; 
+
+ background-size: Defines the size of the background image. 
+ Values: auto, cover, contain, percentages, or length values. 
+ Example: background-size: cover; 
+
+ background-attachment: Specifies if the background image scrolls with the content.; 
+ Values: scroll, fixed, local.
+ Example: background-attachment: fixed;   
+ ---------------------------------------------------------------------------------------------
+code:
+            body{
+    width:100;
+    height:100vh;          /* vh means viewport height
+    background-color:hsl(0,0%,94%);
+    background-image:url(./css.png);
+    background-repeat:no-repeat;
+  /*  background-size:contain;   */
+    background-size:100% 100%;  /* mostly we use this */
+  /*  background-size:cover;*/
+ /* background-position:top right; */
+ /* background-position:left right; */
+  /* background-position:left bottom; */
+}
+-------------------------------------------------------------------------------------------------------------                
+                
