@@ -1,0 +1,110 @@
+Understand  
+          --> about Texts and properties in CSS.
+               1 Text-alignment
+               2 text-decoration
+               3 text-transform
+               4 text-spacing
+               5 text-shadow
+  Text Alignment:- The `text-align` property controls the horizontal alignment of text within an element's box.
+                    - Common values are `left`, `center`, `right`, and `justify`. 
+
+ Text Decoration:- The `text-decoration` property allows you to add decorations like underlines, overlines, or line-through to text. 
+
+ text-decoration-line
+    - The text-decoration-line property specifies which type of line should be used as decoration for text, such as underline, overline, line-through, or none.
+ text-decoration-color
+    - The text-decoration-color property sets the color of the text decoration lines, like underlines or overlines.
+
+ text-decoration-style
+    - The text-decoration-style property is used to set the style of the decoration line.
+
+ text-decoration-thickness
+    - Specifies the thickness of the text decoration line
+    
+Text Shadow:- The text-shadow property allows you to add a shadow effect to text characters. 
+ - It takes three values: horizontal shadow offset, vertical shadow offset, and the shadow color. 
+
+    
+ textTransform:- The text-transform property allows you to control the capitalization of text. 
+Values include uppercase (converts text to all uppercase), lowercase (converts text to all lowercase), and capitalize (capitalizes the first letter of each word). 
+------------------------------------------------------------------------------------
+final code: 
+------------------------------------html file------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero-section">
+        <div>
+        <h1>About Chess</h1>
+        <h2>Best mind Game in the world </h2>
+        <p>The United Nations recognizes that sports, the arts and physical activity have the power to change perceptions, prejudices and behaviours, as well as to inspire people, break down racial and political barriers, combat discrimination and defuse conflict, and therefore contribute in promoting education, sustainable development, peace, cooperation, solidarity, social inclusion and health at the local, regional and international levels.
+           Chess is one of the most ancient, intellectual and cultural games, with a combination of sport, scientific thinking and elements of art. As an affordable and inclusive activity, it can be exercised anywhere and played by all, across the barriers of language, age, gender, physical ability or social status.</p>
+        <a href="#" target="_blank" type="button">Subcribe</a>
+    
+        </div>
+ </section>
+</body>
+</html>
+---------------------------------CSS file-----------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color:hsl(0,0%,94%);
+    display:grid;
+    place-items:center;
+}
+.hero-section{
+    width:50%;
+}
+h1{
+     font-family:"Urbanist", serif;
+     text-align:center;
+     text-decoration-line:underline; 
+     text-decoration-color:red;
+     text-decoration-thickness:10px;
+     text-decoration-style:dotted;
+     text-decoration-style:double;
+     text-decoration-style:wavy;
+     text-shadow:-2px -2px 20px black;
+}
+h2{
+   
+    font-family:"Urbanist", serif;
+    font-size:15px;
+    font-style:italic;
+    text-decoration-line:underline;
+    text-decoration-color:purple;
+    text-decoration-thickness:8px;
+    text-decoration-style:double;
+    text-decoration-style:dotted;
+    text-transform:uppercase;
+    text-transform:lowercase;
+    text-transform:capitalize; /* it do capital of first letter's of every word */
+
+}
+p{            /*It is pseudo class */
+    
+    font-family:"Urbanist", serif;
+    font-size:20px;    /* seeing with line height */
+    font-weight:400;
+    letter-spacing:1.6px;
+    word-spacing:1px;
+    line-height:1.5;      /*means jo hum font size ha ki height ha uska 1.5 lena ki try kar raha hu  */  
+
+}
+p::first-letter{           /* It is pseudo element */
+    text-transform:uppercase;
+    font-size:40px;
+    font-weight:700;
+
+}
+a{
+    text-decoration:none; /* by this underline will be removed */
+    color:green;
+}
+--------------------------------------------------------------------------------------------------------------------------------------
