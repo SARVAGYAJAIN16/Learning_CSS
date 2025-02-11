@@ -1,0 +1,52 @@
+understand   
+          --> about box model : 1 Border and its properties in CSS.
+           In CSS, the `border` property is used to create and control the borders of HTML elements. 
+           Borders are used to visually separate and define the boundaries of elements on a web page. 
+           The `border` property allows you to specify the style, width, and color of borders.
+          * synatx: border: 2px( border width) solid(border style) blue;(border color)
+          code: 
+          --------------------------------------html code---------------------------------------------------------------------
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero-section">
+        <h1>This is Border in Css</h1>
+    </section>
+    <section class="section-border">
+      
+     <!--   <p>The United Nations recognizes that sports, the arts and physical activity have the power to change perceptions, prejudices and behaviours, as well as to inspire people, break down racial and political barriers, combat discrimination and defuse conflict, and therefore contribute in promoting education, sustainable development, peace, cooperation, solidarity, social inclusion and health at the local, regional and international levels.
+            Chess is one of the most ancient, intellectual and cultural games, with a combination of sport, scientific thinking and elements of art. As an affordable and inclusive activity, it can be exercised anywhere and played by all, across the barriers of language, age, gender, physical ability or social status.</p>  -->
+
+    </section>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------CSS code-------------------------------------------------------------------------
+.section-border{
+    width:500px;
+    height:500px;
+    color:white;
+    background-color:rgb(137, 137, 238);
+    text-align:center;
+    /* border here */
+    border:10px solid blue;
+    /* individually also we can write */
+   /* border-top:15px dotted red;
+    border-bottom: 15px double green;
+    border-right:15px ridge burlywood;
+    border-left:15px ridge burlywood;   */
+    /* radius */
+    border-radius:100px 10px 250px 0;
+    border-radius:50%; /* look like circle when you take width and height equally.*/
+}
+body{
+    text-align:center;
+    background-color:hsl(0,0%,94%);
+}
+-----------------------------------------------------------------------------------------------------------------------------------------
