@@ -1,0 +1,75 @@
+Understand 
+          1 ----> about Radial Gradient in CSS.
+          
+          The radial-gradient() function sets a radial gradient as the background image.
+          A radial gradient is defined by its center.
+ code:------------------------------CSS --------------------------         
+section{
+    width:100%;
+    height:100vh;
+    /* background-image:radial-gradient(circle,red 30%,yellow 40%,green 10%,blue 10%,pink 10%); */
+    background-image:repeating-radial-gradient(red,yellow,green 250px); 
+}
+----------------------------------------------------------------------------
+        2-----> about  Box shadow VS drop shadow.
+        
+        Box shadow:-
+        CSS3 Box Shadow is a new property to add shadow effects to any html Element. You can choose your own color, offset, blur, spread, offset and repetition. Unlike border,
+        it not a part of CSS Box Model, thus doesn't effect the layout even if it is bigger in size. Also we can add multiple shadows with different colors and offsets. 
+
+        Drop shadow:-
+        Drop shadow, often used for images, creates a shadow below the element, giving the illusion of it being lifted from the page. 
+        It is defined using the filter property with the drop-shadow function. 
+        The drop-shadow function accepts values for horizontal and vertical offsets, blur radius, and color. 
+
+final code:------------------------------------------------------------------------
+ --------------------------CSS- code of box shadow----------------------------------------------------------------------------
+ {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+     width:100%;
+     height:100vh;
+     background-color:black;
+     display:grid;
+     place-items:center;
+}
+section{
+    background-image:radial-gradient(circle,red,green);
+} 
+ .shadow{
+    width:300px;
+    height:300px;
+    padding:40px;
+    background-color:rgb(236, 63, 63);
+    border-radius:50%;
+}  
+----------------------------------------------------------------------------------------------------------------------
+--------------------------------CSS code of drop shadow---------------------------------------------------------------
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+     width:100%;
+     height:100vh;
+     background-color:black;
+     display:grid;
+     place-items:center;
+}
+/* .shadow{
+    width:300px;
+    height:300px;
+    padding:40px;
+    background-color:rgb(236, 63, 63);
+    border-radius:50%; 
+    box-shadow: 0px 0px 40px 60px rgb(255, 196, 0);
+} */
+img{
+    /* box-shadow: 0px 0px 0px 40px white; */
+    filter: drop-shadow(100px 10px 0px white);
+}
+---------------------------------------------------------------------------------------------------------------
