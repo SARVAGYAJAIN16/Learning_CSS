@@ -1,0 +1,58 @@
+Understand 
+          ----> about Filters in CSS.
+          CSS filters are a set of graphical effects that can be applied to HTML elements to modify their appearance. Filters can alter properties
+          like color, brightness, contrast, and more. 
+
+           Commonly Used Filter Functions: 
+
+         1 grayscale(): Converts the element to grayscale. A value of 1 (or 100%) means fully grayscale. 
+          /* filter: grayscale(0.5); 50% grayscale */
+
+         2 blur(): Applies a blur effect to the element. The value determines the amount of blur. 
+           /* filter: blur(5px); 5 pixels of blur */
+
+         3 brightness(): Adjusts the brightness of the element. Values greater than 1 increase brightness, and values less than 1 decrease it. 
+          filter: brightness(1.5); 150% brightness 
+
+        4 contrast(): Adjusts the contrast of the element. Similar to brightness(), values greater than 1 increase contrast, and values less than 1 decrease it. 
+        filter: contrast(0.8); 80% contrast 
+
+        5 saturate(): Increases or decreases the saturation of the element. Values greater than 1 increase saturation, and values less than 1 desaturate it. 
+         filter: saturate(2); Double saturation 
+
+        6 hue-rotate(): Rotates the hues of the element. Values are in degrees. 
+          filter: hue-rotate(90deg); 90-degree hue rotation 
+
+        7 invert(): Inverts the colors of the element. A value of 1 (or 100%) inverts completely. 
+           filter: invert(0.7); 70% color inversion 
+
+       8 opacity(): Adjusts the opacity (transparency) of the element. Values range from 0 (completely transparent) to 1 (completely opaque). 
+          filter: opacity(0.5); 50% opacity 
+
+      9 sepia(): Applies a sepia tone effect to the element. A value of 1 (or 100%) is full sepia. 
+         filter: sepia(0.7); 70% sepia effect 
+         
+  ------------------------------------------------------------CSS code--------------------------------------------------------------------------------------------------------
+         *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.section{
+    width:100%;
+    height:100vh;
+    background-color:hsl(0,0%,94%);
+    display:grid;
+    place-items:center;
+}
+img{
+     width:50%;
+     border-radius:20px;     /* with the help of border radius we bring corner-cut in our image.*/
+     box-shadow: rgba(0, 0 ,0, 0.16); 
+     /* filter:grayscale();  */
+     /* filter:blur(5px); */
+     /* filter:brightness(30%); */
+     /* filter:invert(); */
+     /* filter:opacity(0.5); */
+} 
+--------------------------------------------------------------------------------------------------------------------------------
