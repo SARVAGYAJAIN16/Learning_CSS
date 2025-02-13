@@ -1,0 +1,85 @@
+Understand 
+           about--> Combinators in CSS.
+           CSS combinators are used to define relationships between different elements in your HTML document. They allow you to target elements based on their position and hierarchy within the document structure.  
+
+         1 Descendant Selector (Space): Selects an element that is a descendant of another element. 
+
+         2 Child Selector (>): Selects an element that is a direct child of another element. 
+
+         3 Adjacent Sibling Selector (+): Selects an element that is immediately preceded by another element. 
+
+         4  General Sibling Selector (~): Selects all elements that are siblings of another element and share the same parent. 
+
+         5 Universal Selector (*): Selects all elements. 
+
+  Final code---------------------------------------------CSS file--------------------------------------------------------------------
+  *{                       /* using universal selectors */
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    display:grid;
+    background-image:hsl(0,0%,94%);
+    place-items: center;
+}
+.section-1 ul p{                    /* using descendant selector */
+    font-weight: bold;
+    color:red;
+}
+/* now we have a child selector. means 'ul' is a (parent)  and inside 'ul' everything is a (child) */
+.section-1 ul li{
+    color:green;
+}
+/* .section-1 ul>li{
+    color:brown;   
+} */
+ .section-1> ul>li{
+    color:aqua;
+ }
+ /* Using Adjacent sibling selector */
+ .section-1 ul p + li{
+    color:darkgoldenrod;
+ }
+ /* using General sibling Selector */
+ .section-1 ul p ~ li{
+    color:purple;
+ }
+---------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------HTML code---------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="section-1">
+            <ul>
+                <p>This is awesome</p>
+                <li>inside</li>
+                  <li>
+                    inside
+                    <ol>
+                        <li>nested</li>
+                        <ul>
+                            <li> deep nested</li>
+                        </ul>
+                        <li>nested</li>
+                    </ol>
+                  </li>
+                  <li>inside</li>
+                  <p>I am last</p>
+                  <li>last child</li>
+            </ul>    
+        </div>
+    </section>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------------------------------
+         
