@@ -1,0 +1,66 @@
+Understand about Overflow element in CSS.
+    The overflow property in CSS is used to control how content overflows its containing element when it doesn't fit within the available space.
+    It's a useful property for handling content that exceeds its container's dimensions. 
+               It have 4 property:
+                 1 -> overflow: visible (by default)
+                      Overflow: Visible (Default): This is the default behavior where content can overflow its container without any clipping.
+                      Use it when you want content to extend beyond its container's boundaries.  
+                 2 -> overflow: hidden
+                       Content that overflows the container is hidden and not visible. 
+                       Useful when you want to hide extra content that doesn't fit within a fixed-size 
+                 3 -> overflow : scroll
+                       Scrollbars (both horizontal and vertical) are added to the container, allowing users to scroll to see the hidden content. 
+                       Use it when you want to display all content and provide a scrolling mechanism. 
+                 4 -> overflow : auto
+                       Scrollbars are added only when content overflows the container. 
+                       It's a combination of visible (no scrollbars if content fits) and scroll (scrollbars when content overflows).
+                       Ideal for creating scrollable containers only when needed. 
+ Final code:
+    ---------------------------------------------------------------CSS file---------------------------------------------------------------------
+    *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    display:grid;
+    place-items:center;
+}
+.overflow-div{
+    width:600px;
+    height:300px;
+    box-shadow:rgba(0,0,0,0.05);
+    border:5px solid cadetblue;
+    padding:10px;
+    /* overflow:visible;   */           /* bydefault */
+   /*overflow:hidden; */
+   /* overflow-y:scroll; */
+   /* overflow-x:scroll; */
+   overflow:auto;
+}
+------------------------------------------------------HTML code----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="overflow-div">
+            <p>
+                
+                Artificial intelligence is a field of science concerned with building computers and machines that can reason, learn, and act in such a way that would normally require human intelligence or that involves data whose scale exceeds what humans can analyze. AI is a broad field that encompasses many different disciplines, including computer science, data analytics and statistics, hardware and software engineering, linguistics, neuroscience, and even philosophy and psychology. 
+                On an operational level for business use, AI is a set of technologies that are based primarily on machine learning and deep learning, used for data analytics, predictions and forecasting, object categorization, natural language processing, recommendations, intelligent data retrieval, and more.
+                Artificial intelligence is a field of science concerned with building computers and machines that can reason, learn, and act in such a way that would normally require human intelligence or that involves data whose scale exceeds what humans can analyze. AI is a broad field that encompasses many different disciplines, including computer science, data analytics and statistics, hardware and software engineering, linguistics, neuroscience, and even philosophy and psychology. 
+                On an operational level for business use, AI is a set of technologies that are based primarily on machine learning and deep learning, used for data analytics, predictions and forecasting, object categorization, natural language processing, recommendations, intelligent data retrieval, and more.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
+
+    
+    
