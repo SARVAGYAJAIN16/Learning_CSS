@@ -1,0 +1,105 @@
+Understand about Pseudo class in CSS.
+   1 Hover (`a:hover`): This state triggers when the user hovers their mouse pointer over a link. 
+   2  :first-child - Selects the first child element of its parent. 
+   3  :last-child - Selects the last child element of its parent
+   4  :nth-child(n) - Selects elements based on their position within a parent element, where "n" is a numeric value. 
+   5  :first-of-type - Selects the first element of its type within its parent. 
+   6  :last-of-type - Selects the last element of its type within its parent. 
+   7  :nth-of-type(n) - Selects elements of a specified type based on their position within a parent. 
+   final code:
+   --------------------------------CSS file-------------------------------------------------------------------------------
+   *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0,0%,94%);
+    display:grid;
+    place-items:center;
+}
+.hero-section{
+    margin:60px 30px;
+}
+/* we are here targeting element */
+  .content-1 li:first-child{             /* this is also correct */
+    color:purple;
+}
+  .content-1 ul li:first-child{    /* it is taking ul as a child and first li as a first child
+                                       (which is correct)  */
+     color:cadetblue;
+ } 
+ .content-1 ul:first-child{  /* this  is taking every li as a first child  (which is wrong)*/
+    color:yellow;
+ } 
+ .content-1 p:first-child{
+    color: burlywood;
+ }
+ .content-1 li:first-child{   /* between class and li there is a <p>tag and we say that 
+                                 make li as a child so green color will not come.  note: ul
+                                 is commented*/
+    color: green;
+ }
+ .content-1 p:last-child{
+    color:blue;
+ }
+ /* to avoid headache of between there is some element or not directly 
+  to whom we want we can make it first child acc to our use */
+ .content-1 li:nth-of-type(3)
+ {
+    color:crimson;
+ }
+ .content-1 p:last-of-type{
+    color:aqua;
+ } 
+ .content-1 li:nth-child(4)   /* so it make 3 child in gold color not 4 because
+                                  after class(parent) all are its child  */ 
+ {
+    color:gold;
+ }
+ .content-1 li:nth-child(even)
+ {
+    color:gold;
+ }
+ /* we can target classes also directly.  */
+ .p-class:nth-child(even)
+ {
+    color:blueviolet;
+ }
+------------------------------------------------------------------------------------------------------
+------------------------------------------HTML file------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo_class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero-section">
+        <div class="content-1">
+        <!-- <ul>  -->
+           <p>I am first</p> 
+          <li>Home</li>
+          <li>Home</li>
+          <li>Home</li>
+          <li>Home</li>
+          <li>Home</li>
+          <!--? wht if the p is the last child  -->
+          <p>I am Last</p>
+        <!-- </ul>  -->
+        </div>
+        <div class="content-2">
+          <ul class="testing">
+            <li class="p-class">Home</li>
+            <li class="p-class">Home</li>
+            <li class="p-class">Home</li>
+            <li class="p-class">Home</li>
+            <li class="p-class">Home</li>
+          </ul>
+        </div>
+        </section>
+</body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
