@@ -1,0 +1,86 @@
+Its a beginning how website can be made beautiful by using parallax effect.
+code:-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"jost";
+        }
+        section{                         /* with this section we can target all other section */
+            width:100%;
+            height:100vh;
+            display:grid;
+            place-items:center;
+            text-align:center;
+            background-image:linear-gradient(
+                rgba(0,0,0,0.3),
+                rgba(0,0,0,0.3)
+            ),
+            url("./man-neon-suit-sits-chair-with-neon-sign-that-says-word-it.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-attachment: fixed;   /* here backround image will be fixed and text will up and down */
+        }
+        .section-2{
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-image:linear-gradient(
+                rgba(0,0,0,0.3),
+                rgba(0,0,0,0.3)
+            ),
+            url("./world-collapse-doomsday-scene-digital-painting.jpg");
+            /* here no need of background-attachment:fixed; */
+        }
+        .section-3{
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-image:linear-gradient(
+                rgba(0,0,0,0.3),
+                rgba(0,0,0,0.3)
+            ),
+            url("./10029736.jpg");
+            background-attachment:fixed;
+        }
+        h2{
+             font-size:64px;
+             font-weight:bold;
+             text-transform:uppercase;
+             color:white;
+             text-shadow: 2px 2px 5px black;
+        }
+        p{
+            font-size:20px;
+            color:white;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h2>parallax</h2>
+            <p>The new era has begin</p>
+        </div>
+    </section>
+    <section class="section-2">
+        <div>
+            <h2>Play Now</h2>
+            <p>World Best Game Is Here</p>
+        </div>
+    </section>
+    <section class ="section-3">
+        <div>
+            <h2>Soldier</h2>
+            <p>Lets Start the Game</p>
+        </div>
+    </section>
+</body>
+</html>
