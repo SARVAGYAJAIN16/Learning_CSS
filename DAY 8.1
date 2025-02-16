@@ -1,0 +1,149 @@
+----> Understand about Flexbox in CSS in depth.
+  Flexbox is a one-dimensional layout model that helps you distribute space along a single axis (either horizontally or vertically) in a flexible and efficient way. 
+  It allows you to align and distribute elements within a container, making it easier to create complex layouts without using floats or positioning. 
+  
+                           /* ----------- Flex Container Properties (Parent) ----------- */
+
+ 1:  Flex Container (display: flex;):
+To create a flexbox layout, you need a flex container. Apply display: flex; to the container element.
+.flex-container {
+  display: flex;
+} 
+
+ 2: Flex Items:
+Elements inside the flex container are called flex items.
+Flex items can be aligned and distributed along the main axis (horizontal or vertical). 
+
+ 3: Main Axis and Cross Axis:
+ In a flex container,  one axis is considered the main axis, and the other is the cross axis. You can set the main axis to be either horizontal (row) or vertical (column). 
+
+ Flex Direction (flex-direction): Use flex-direction to specify the direction to either main axis or cross-axis.
+Values: row, row-reverse, column, column-reverse.
+.flex-container {
+  flex-direction: row;         Horizontal main axis (default) 
+} 
+
+ if the flex-direction:row then horizontal will be main-axis 
+if flex-direction:column the vertical part will be main-axis and horizontal axis become the cross axis  
+
+ Items display in a row (the flex-direction property's default is row). 
+
+ 4: Justify Content (justify-content): justify-content aligns flex items along the main axis.
+Values include flex-start, flex-end, center, space-between, and space-around. 
+
+ 5: Align Items (align-items):
+align-items aligns flex items along the cross axis.
+Values include flex-start, flex-end, center, stretch, and baseline. 
+
+ 6: flex-wrap:
+- Specifies whether flex items should wrap to the next line when they overflow the container.
+ - Values: nowrap (default), wrap, wrap-reverse. 
+
+ 7: align-content:
+- Aligns multiple lines of flex items when there is extra space along the cross axis.
+- Values: flex-start, flex-end, center, space-between, space-around, stretch.
+
+final code ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------CSS file------------------------------------------------------------------------------------------------------------
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;   
+}
+body{
+    background-color:hsl(0,0%,94%);
+    width:100%;
+    height:100vh;
+    display:grid;
+    place-items:center;
+}
+h1{
+    font-size:4.2rem;
+    color:black;
+    margin: 1rem 0;
+}
+.flex-container{
+    width:60%;
+    height:400px;
+    margin:0 auto;
+    box-shadow:rgba(0,0,0,0.16) 0px 1px 4px,rgb(51,51,51) 0px 0px 0px 3px;
+    background:linear-gradient(to right,#514a9d,#24c6dc);
+    color:white;
+    /* flex box  container properties */
+    display:flex;
+    /* flex-direction:column; */  /* box will come in one column */
+    flex-direction:row;
+    /* flex-direction:row-reverse; */
+    /* flex-direction:column-reverse;*/
+    justify-content:flex-start;
+    justify-content:flex-end;
+    justify-content:center;
+    /* justify-content:space-around; */
+    justify-content:space-between;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    align-items:flex-end;
+    align-items:center;
+    justify-content:center;
+    align-items:center;
+    gap:20px; /* giving gap in between */
+    /* flex-direction:column;
+    align-items:center; */
+    flex-direction:row;
+    flex-wrap:wrap;
+
+}  
+.item{       /* calling for all children its set acc to our html file */
+    width:100px;
+    /* aspect-ratio:1; */
+    height:100px;
+    background-image:linear-gradient(to right, #004d7a, #00bf72, #a8eb12);
+    box-shadow:rgba(0,0,0,0.16) 0px 1px 4px,rgb(51,51,51) 0px 0px 0px 3px;
+    font-size:20px;
+    flex:1;
+}
+
+/* .item-2{         by seperate class we have change particular properties of a indivival box  (we have made like bar graph */
+     /* height:300px;  */
+/* }    */
+
+/* With item (child) we are seeing here */
+
+ .item-2{ 
+    flex-grow:1;  
+    flex-shrink:5;   /* (5 times compare to other jaldi sa shrink hu jayo) it means when we inspect move our window so only item-2 will 
+                       we shrink remaining other will we on original size(when we are moving window).*/
+ }  
+/* .item-3{
+    flex-basis:200px;
+} */
+ .item-4{
+    align-self:center;
+ }
+ --------------------------------------------------------------HTML code-------------------------------------------------------------------------------------------------------------
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS flex-box</h1>
+    <section class="flex-container">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <!-- For  flex wrap add 4 more div-->
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+
+    
+    </section>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
