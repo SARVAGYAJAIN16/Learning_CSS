@@ -1,0 +1,65 @@
+Overview :--> Circle or ball moving horizontally with the help of transitions.
+final code:
+-------------------------------------CSS file------------------------------------------------------------------------------------------------------
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:black;
+}
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:40px;
+    padding-left:20px; /* from left side we are giving padding */
+   
+}
+.box{
+    width:100px;
+    aspect-ratio:1;
+    background-color:blue;
+    border-radius:50%;
+    box-shadow: 0 0 0 10px rgb(56, 3, 143); /* spread */
+     transition:all 5s; 
+}
+.box:nth-child(1):hover{
+    /* transition-timing-function:ease-in; */
+    translate:90vw 0;                       /* viewport width  (translate means we can move horiontally and vertically)*/
+    transition: ease-in 2s;
+}
+.box:nth-child(2):hover{
+    transition-timing-function:ease;
+    translate:90vw 0;                  /* new css feature */
+}
+.box:nth-child(3):hover{
+    transition-timing-function:ease-out;
+    translate:90vw 0;
+}
+.box:nth-child(4):hover{
+    transition-timing-function:ease-in-out;
+    translate:90vw 0;
+}
+------------------------------------------------------------HTML code-----------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini_project_on_transitions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+    </div>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------------
